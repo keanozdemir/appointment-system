@@ -1,0 +1,104 @@
+LAB 01 — TEAM & PRODUCT GOAL RECORD
+1. General Information & Repository Links
+•	Project Title: Scissors & Comb — Smart Appointment Management System (RandevuBudur)
+
+•	Course: Software Development Methodologies
+
+•	Semester Project: Lab 01 — Team and Product Goal Alignment
+
+•	Repository Link: https://github.com/keanozdemir/appointment-system
+
+•	Issue Board Link: https://github.com/users/keanozdemir/projects/1
+
+2. Team Structure & Working Agreement
+Members & Primary Responsibilities
+1.	Member 1 (Scrum Master / Lead Backend / DevOps Kaan Ozdemir 73973):
+         
+a.	Responsibilities: Facilitating daily syncs, setup of repository/CI workflow, backend architecture, API endpoints, domain modeling, and maintenance of project reports (Sections A, B, E).
+
+2.	Member 2 (Product Owner / Lead Frontend / QA & UX mehmet celik 55892):
+
+a.	Responsibilities: Backlog refinement, UI/UX design, frontend booking interface, integration testing, user journey validation, and maintenance of project reports (Sections C, D, F).
+
+Team Collaboration Rules
+•	Communication Channels: Discord for daily async messages and voice pair-programming; WhatsApp for urgent blockers.
+
+•	Meeting Rhythm:
+
+o	Sprint Planning & Retrospective: Every Tuesday at 19:00 (45 minutes).
+
+o	Async Stand-up / Pair Check: Monday, Wednesday, Friday at 21:00 (10 minutes).
+
+•	Branch & Review Policy:
+
+o	No direct pushes to main.
+
+o	All work must be done on branches following feature/feature-name or docs/doc-name.
+
+o	Every Pull Request (PR) requires at least 1 review approval from the teammate and passing automated checks before merging.
+
+•	Blocked Work & Absence Protocol:
+
+o	If a member is blocked on a task for >12 hours, it must be reported in the Discord channel.
+
+o	In case of planned absences, tasks are re-assigned or tackled via pair programming to maintain progress.
+
+3. Product Goal & Problem Statement
+Domain & Problem Identification
+In small service businesses (e.g., "Scissors & Comb Barbershop" in Kadıköy), appointment booking is handled manually over phone calls or WhatsApp messages. This leads to frequent interruptions during service delivery, accidental double-booking errors, and lost customers due to delayed responses outside operating hours.
+
+Product Goal
+To develop a working, simple, and reliable web-based appointment management system where a small business can manage its services and schedule, and customers can view real-time available time slots and book conflict-free appointments within 1 minute without making a phone call.
+
+Target Users
+•	Business Owner (Barış Usta): Defines service duration, configures working hours, and views/manages daily calendar appointments.
+
+•	Customer (Caner Sever): Views real-time open slots, books conflict-free appointments, and tracks or cancels existing bookings.
+
+4. Candidate User Journeys
+1.	User Journey 1: Customer Conflict-Free Booking
+
+a.	Caner opens the site, selects "Beard Trim & Skin Care (45 Min)".
+
+b.	The system checks the schedule and presents only unreserved 45-minute slots.
+
+c.	Caner picks Tuesday at 14:00, enters his contact details, and clicks "Confirm Appointment".
+
+d.	The system locks the slot and presents a booking confirmation code.
+
+2.	User Journey 2: Owner Schedule & Status Management
+
+a.	Barış Usta logs into the admin panel to view the hourly schedule for the day.
+
+b.	After completing Caner's service, Barış marks the appointment as "Completed".
+
+c.	If a client misses their appointment, Barış marks it as "No-Show/Cancelled", which instantly frees up that time slot on the public calendar.
+
+3.	User Journey 3: Customer Lookup & Self-Cancellation
+
+a.	Caner needs to reschedule due to an emergency, so he accesses the booking lookup page using his phone number.
+
+b.	He locates his upcoming reservation and clicks "Cancel Appointment" (allowed up to 2 hours prior to the slot time).
+
+5. Assumptions & Out-of-Scope List
+Key Assumptions
+•	Customers have web access on modern desktop or mobile browsers.
+
+•	Time slots are temporarily locked for 5 minutes during active booking selection to prevent race conditions between simultaneous users.
+
+•	The system serves a single business unit operating at one location.
+
+Explicit Out-of-Scope List
+•	 Online Credit Card / Payment Gateways: Payments are strictly handled in-person at the shop.
+
+•	 Third-Party Paid SMS / WhatsApp APIs: Confirmation notices are displayed on-screen and simulated via email.
+
+•	 Native Mobile Applications (iOS/Android): The application will be a fully responsive web app only.
+
+•	 Multi-Tenant / Multi-Branch Infrastructure: Initial scope supports only one business entity and one unified calendar.
+
+6. Initial Discovery Issues (Project Board Allocation)
+•	📌 Issue #1 (Assigned to Member 1): Set up project repository base structure, draft domain models (Appointment, Service), and document Sections A & B in the report.
+
+•	📌 Issue #2 (Assigned to Member 2): Create README.md, configure GitHub Board with Todo/In Progress/Done columns, and draft frontend wireframes/components.
+
